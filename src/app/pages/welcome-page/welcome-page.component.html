@@ -1,0 +1,5 @@
+<h1>Welcome</h1>
+<label for="name">Name: </label>
+<input id="name" type="text"  [formControl]="userNameFormControl" (keydown.enter)="onSubmit()" placeholder="Please enter your name">
+  <div *ngIf="userNameFormControl.touched && userNameFormControl.errors" class="error-message">username is required </div>
+<button type="button" (click)="onSubmit()">Enter</button>

@@ -1,0 +1,13 @@
+<div class="user-name" *ngIf="(currentUser$ | async)?.userName">
+  Welcome {{(currentUser$ | async)?.userName}}</div>
+
+<div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Google_Books_logo_2015.svg/1200px-Google_Books_logo_2015.svg.png" alt=""/>
+  <input type="text" [formControl]="searchFormControl" placeholder="Enter your search..">
+</div>
+
+<div class="books-wrapper">
+  <div *ngFor="let book of (searchResult$ | async)?.items | slice:0:20;">
+    <app-book [book]="book"></app-book>
+  </div>
+</div>
