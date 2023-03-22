@@ -2,7 +2,11 @@
   Welcome {{(currentUser$ | async)?.userName}}</div>
 
 <div>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Google_Books_logo_2015.svg/1200px-Google_Books_logo_2015.svg.png" alt=""/>
+  <button (click)="gotoWishList()">Go to Wish List</button>
+</div>
+
+<div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Google_Books_logo_2015.svg/1200px-Google_Books_logo_2015.svg.png"  height="100" alt=""/>
   <input type="text" [formControl]="searchFormControl" placeholder="Enter your search..">
 </div>
 

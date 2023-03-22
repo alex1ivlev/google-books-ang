@@ -5,6 +5,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {AppRoutingModule} from "./app-routing.module";
 import {SearchPageModule} from "./pages/search-page/search-page.module";
 import {HttpClientModule} from "@angular/common/http";
+import {WishlistModule} from "./pages/wishlist/wishlist.module";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {HttpClientModule} from "@angular/common/http";
     ReactiveFormsModule,
     AppRoutingModule,
     SearchPageModule,
+    WishlistModule,
     HttpClientModule
   ],
   providers: [],

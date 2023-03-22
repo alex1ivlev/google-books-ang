@@ -14,6 +14,6 @@ export class SearchService {
   ) { }
 
   getResultByQuery(query:string): Observable<GoogleResponse>{
-    return this.http.get<GoogleResponse>(`${environment.booksApi}?q=${query}`)
+    return this.http.get<GoogleResponse>(`${environment.booksApi}?q=${query}&maxResults=20`)
   }
 }

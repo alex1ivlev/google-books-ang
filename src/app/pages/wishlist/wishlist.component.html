@@ -1,0 +1,6 @@
+<div class="wishlist">
+  <h1>Wish List:</h1>
+    <div *ngFor="let book of (wishList$ | async)">
+      <app-book [book]="book"></app-book>
+    </div>
+</div>

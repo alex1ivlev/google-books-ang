@@ -1,8 +1,14 @@
-<button type="button">close</button>
+<!--<button type="button">close</button>-->
+<div style="border: 1px solid; margin: 1rem;">
+  <div *ngIf="wishlist$|async as wishlist">
+    <button *ngIf="checkIfExistsInArray(wishlist, book!)" (click)="remove()">Remove from Wishlist</button>
+    <button *ngIf="!checkIfExistsInArray(wishlist, book!)" (click)="add()">Add to Wishlist</button>
+  </div>
 
-<div>
-  <h1>Book Name : {{book?.volumeInfo.title}}</h1>
-</div>
-<div>
-  {{book?.volumeInfo.description}}
+  <div>
+    <h2>Book Name : {{book?.volumeInfo.title}}</h2>
+  </div>
+  <div>
+    {{book?.volumeInfo.description}}
+  </div>
 </div>
